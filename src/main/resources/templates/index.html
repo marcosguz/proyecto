@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head th:replace="layouts/base-layout::head"></head>
+    <body>
+        <div>
+            <span th:if="${session.usuario!=null}">Bienvenido <span th:text="${session.usuario.nombre}"></span></span>
+            
+            <form th:action="@{/logout}" method="POST">
+                <button type="submit">Salir</button>
+            </form>
+            
+        </div>
+    </body>
+</html>

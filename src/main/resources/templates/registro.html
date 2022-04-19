@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head th:replace="layouts/base-layout::head"></head>
+    <body>
+        <h4>Reistro</h4>
+        
+        <form th:action="@{/auth/registro}" th:object="${usuario}" method="POST">
+            <label>Nombre</label>
+            <input type="text" th:field="*{nombre}">
+            <br>
+            <label>Apellido</label>
+            <input type="text" th:field="*{apellido}">
+            <br>
+            <label>Numero de Ultimatix</label>
+            <input type="text" th:field="*{username}">
+            <br>
+            <label>Telefono</label>
+            <input type="text" th:field="*{telefono}">
+            <br>
+            <label>Email</label>
+            <input type="email" th:field="*{email}">
+            <br>
+            <label>Password</label>
+            <input type="password" th:field="*{password}">
+            <br>
+            <input type="submit" value="Registro">
+        </form>
+        
+    </body>
+</html>
